@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Seu Portal de Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>GameZone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#news">Notícias</a></li>
+                <li><a href="#reviews">Análises</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news">
+            <h2>Últimas Notícias</h2>
+            <article>
+                <h3>Grande Lançamento: Novo Jogo AAA</h3>
+                <p>Hoje foi lançado o tão esperado jogo AAA, disponível para todas as plataformas...</p>
+            </article>
+            <article>
+                <h3>Atualização em Jogo Popular</h3>
+                <p>O jogo X recebeu uma grande atualização com novos modos de jogo e correções de bugs...</p>
+            </article>
+        </section>
+
+        <section id="reviews">
+            <h2>Análises Recentes</h2>
+            <article>
+                <h3>Análise de "Jogo Y"</h3>
+                <p>"Jogo Y" traz uma experiência inovadora com gráficos impressionantes, mas peca na narrativa...</p>
+            </article>
+            <article>
+                <h3>Análise de "Jogo Z"</h3>
+                <p>"Jogo Z" é uma aventura emocionante que prende o jogador do início ao fim...</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GameZone. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #00ffcc;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: #262626;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #00ffcc;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00cc99;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Mensagem enviada! Obrigado por entrar em contato.');
+});
